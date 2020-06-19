@@ -16,12 +16,12 @@ footer {
 
 nav ul {
   list-style: none;
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
 }
 
 nav ul li {
   display: inline-block;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 nav ul li:first-child a {
