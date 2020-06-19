@@ -5,7 +5,8 @@ html {
   background-color: #fefefe;
 }
 
-main {
+main,
+footer {
   max-width: 32rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -13,13 +14,36 @@ main {
   margin-left: auto;
 }
 
+nav ul {
+  list-style: none;
+}
+
+nav ul li:first-child a {
+  border: none;
+}
+
 h1,
 h2,
 h3,
-h4 {
+h4,
+nav ul li:first-child a {
   font-family: "Playfair Display", serif;
 }
 
 h1 {
   font-size: 3rem;
+}
+
+a {
+  color: inherit;
+}
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
