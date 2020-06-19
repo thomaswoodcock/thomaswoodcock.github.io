@@ -40,7 +40,8 @@ h1,
 h2,
 h3,
 h4,
-nav ul li:first-child a {
+nav ul li:first-child a,
+article article p span {
   font-family: "Playfair Display", serif;
 }
 
