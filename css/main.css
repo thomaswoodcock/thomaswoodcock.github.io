@@ -18,8 +18,12 @@ nav ul {
   list-style: none;
 }
 
+nav ul li {
+  display: inline-block;
+}
+
 nav ul li:first-child a {
-  border: none;
+  text-decoration: none;
 }
 
 h1,
