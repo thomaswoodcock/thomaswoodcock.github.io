@@ -9,6 +9,7 @@ title: Diary
   <article>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+    {{ post.content | strip_html | truncatewords: 100 }}
   </article>
   {% endfor %}
 </article>
