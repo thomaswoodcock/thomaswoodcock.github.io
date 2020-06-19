@@ -53,6 +53,11 @@ a {
   color: inherit;
 }
 
+:focus {
+  outline: 0.125rem solid #111111;
+  outline-offset: 0.125rem;
+}
+
 .hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
