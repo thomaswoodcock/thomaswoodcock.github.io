@@ -14,6 +14,10 @@ footer {
   margin-left: auto;
 }
 
+main article article + article {
+  border-top: 2px dotted #111111;
+}
+
 nav ul {
   list-style: none;
   padding-left: 0;
