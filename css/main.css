@@ -26,6 +26,13 @@ nav ul li:first-child a {
   text-decoration: none;
 }
 
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 h1,
 h2,
 h3,
