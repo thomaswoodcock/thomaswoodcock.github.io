@@ -8,9 +8,9 @@
     contains person.id" | group_by: "rating" | sort: "name" | reverse %}{% for
     rating_group in grouped_works %}{% assign rating = rating_group.name |
     minus: 1 %}
-    <h3>{{ rating }}</h3>
+    <h3>{{ site.data.ratings[rating] | upcase }}</h3>
     <ul>
-      {% for work in rating_group %}
+      {% for work in rating_group.items %}
       <li>({{ work.year }}) {{ work.name }}</li>
       {% endfor %}
     </ul>
