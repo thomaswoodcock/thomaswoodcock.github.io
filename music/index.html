@@ -5,15 +5,18 @@ title: Music
 
 <h1>Music</h1>
 <ul>
-  {% for album_artist in site.data.artists | sort_natural %}
+  {% assign artists = site.data.artists | sort_natural: "name" %} {% for
+  album_artist in artists %}
   <li>
     <h2>{{ album_artist.name }}</h2>
-    {% assign albums = site.data.albums | where: "id", album_artist.id %}
-    <li>
-    {% for artist_album in albums %}
-    {{ artist_album.name }}
-    {% endfor %}
-</li>
+    {% assign albums = site.data.albums | where: "id", album_artist.id | sort:
+    "year" %}
+    <ul>
+      <li>
+        {% for artist_album in albums %}({{ artist_album.year }}) {{
+        artist_album.name }} - {{ artist_album.rating }}{% endfor %}
+      </li>
+    </ul>
   </li>
   {% endfor %}
 </ul>
