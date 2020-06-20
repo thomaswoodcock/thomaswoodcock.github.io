@@ -1,0 +1,17 @@
+<h1>{{ page.title }}</h1>
+<article>
+  {% assign people = peopledata | sort_natural: "name" %}{% for person in people
+  %}
+  <article>
+    <h2>{{ person.name }}</h2>
+    {% assign works = workdata | where: "id", person.id | sort: "year" %}
+    <ul>
+      <li>
+        {% for work in works %}{% assign rating = work.rating | minus: 1 %}({{
+        work.year }}) {{ work.name }} - {{ site.data.ratings[rating] | upcase
+        }}{% endfor %}
+      </li>
+    </ul>
+  </article>
+  {% endfor %}
+</article>
