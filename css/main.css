@@ -33,7 +33,8 @@ main article article li + li {
   padding-top: 1rem;
 }
 
-main article article p {
+main article article p,
+time {
   font-size: 0.8rem;
 }
 
