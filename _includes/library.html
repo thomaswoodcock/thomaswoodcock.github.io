@@ -10,8 +10,9 @@
     minus: 1 %}
     <h3>{{ site.data.ratings[rating] | upcase }}</h3>
     <ul>
-      {% for work in rating_group.items %}
-      <li>({{ work.year }}) {{ work.name }}</li>
+      {% assign sorted_works = rating_group.items | sort: "year" %}{% for work
+      in sorted_works %}
+      <li>{{ work.name }} ({{ work.year }})</li>
       {% endfor %}
     </ul>
     {% endfor %}
