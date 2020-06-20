@@ -8,7 +8,7 @@ title: Home
 
 <article>
   <article>
-    <h2>Recent Diary Entries</h2>
+    <h2>Latest Diary Entries</h2>
     {% for post in site.posts limit:3 %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <time datetime="{{ post.date }}"
@@ -17,12 +17,25 @@ title: Home
     {% endfor %}
   </article>
   <article>
-    <h2>Recent Album Ratings</h2>
-    {% assign albums = site.data.albums | reverse %}{% for album in albums
-    limit: 3 %}{% assign artists = "" | split: "" %}{% for artist in
-    album.person %}{% assign album_artist = site.data.artists | find: "id",
-    artist.id %}{% assign artists = artists | push: album_artist.name %}{%
-    endfor %}{{ artists | join: " & " }} - {{ album.name }} ({{ album.year }})
-    {% endfor %}
+    <h2>Latest Album Ratings</h2>
+    {% assign albums = site.data.albums | reverse %}
+    <ul>
+      {% for album in albums limit: 3 %}
+      <li>
+        {{ album.name }} ({{ album.year }})
+      </li>
+      {% endfor %}
+    </ul>
+  </article>
+  <article>
+    <h2>Latest Film Ratings</h2>
+    {% assign films = site.data.films | reverse %}
+    <ul>
+      {% for film in films limit: 3 %}
+      <li>
+        {{ film.name }} ({{ film.year }})
+      </li>
+      {% endfor %}
+    </ul>
   </article>
 </article>
