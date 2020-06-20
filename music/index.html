@@ -1,6 +1,22 @@
 ---
-layout: library
+layout: default
 title: Music
-people: site.data.artists
-works: site.data.albums
 ---
+
+<h1>{{ page.title }}</h1>
+<ul>
+  {% assign people = site.data.artists | sort_natural: "name" %} {% for person
+  in people %}
+  <li>
+    <h2>{{ person.name }}</h2>
+    {% assign works = site.data.albums | where: "id", person.id | sort: "year"
+    %}
+    <ul>
+      <li>
+        {% for work in works %}({{ work.year }}) {{ work.name }} - {{
+        work.rating }}{% endfor %}
+      </li>
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
