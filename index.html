@@ -7,11 +7,22 @@ title: Home
 <p>Welcome to my website!</p>
 
 <article>
-  <h2>Recent Diary Entries</h2>
-  {% for post in site.posts limit:3 %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <time datetime="{{ post.date }}"
-    >{{ post.date | date_to_long_string: "ordinal" }}</time
-  >
-  {% endfor %}
+  <article>
+    <h2>Recent Diary Entries</h2>
+    {% for post in site.posts limit:3 %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <time datetime="{{ post.date }}"
+      >{{ post.date | date_to_long_string: "ordinal" }}</time
+    >
+    {% endfor %}
+  </article>
+  <article>
+    <h2>Recent Album Ratings</h2>
+    {% assign albums = site.data.albums | reverse %}{% for album in albums
+    limit: 3 %}{% assign artists = "" | split: "" %}{% for artist in
+    album.person %}{% assign album_artist = site.data.artists | find: "id",
+    artist.id %}{% assign artists = artists | push: album_artist.name %}{%
+    endfor %}{{ artists | join: " & " }} - {{ album.name }} ({{ album.year }})
+    {% endfor %}
+  </article>
 </article>
