@@ -8,7 +8,9 @@ title: Diary
   {% for post in paginator.posts %}
   <article>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+    <time datetime="{{ post.date }}"
+      >{{ post.date | date_to_long_string: "ordinal" }}</time
+    >
     <p>
       {{ post.content | strip_html | truncatewords: 50 }}
       <span><a href="{{ post.url }}">Read More</a></span>
