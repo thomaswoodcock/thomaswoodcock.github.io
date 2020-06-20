@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/thomaswoodcock/library/master/schemas/people.schema.json",
+  "items": [
+    {
+      "id": 1,
+      "name": "The Prodigy"
+    },
+    {
+      "id": 2,
+      "forename": "John",
+      "surname": "Martyn"
+    },
+    {
+      "id": 3,
+      "name": "Fatboy Slim"
+    },
+    {
+      "id": 4,
+      "forename": "Sonny",
+      "surname": "Rollins"
+    },
+    {
+      "id": 5,
+      "forename": "Bobby",
+      "surname": "Timmons"
+    }
+  ]
+}

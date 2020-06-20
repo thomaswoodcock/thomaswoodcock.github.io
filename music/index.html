@@ -1,0 +1,9 @@
+---
+layout: default
+title: Music
+---
+
+<h1>Music</h1>
+<ul>
+  {% for album in site.data.albums.items %}{% album.name %}{% endfor %}
+</ul>
