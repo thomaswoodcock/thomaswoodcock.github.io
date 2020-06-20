@@ -1,0 +1,41 @@
+- id: 1
+  name: Fat Girl
+  director: 1
+  year: 2001
+  rating: 6
+
+- id: 2
+  name: Design for Living
+  director: 2
+  year: 1933
+  rating: 5
+
+- id: 3
+  name: Too Early/Too Late
+  director: 3,4
+  year: 1981
+  rating: 4
+
+- id: 4
+  name: Le Boucher
+  director: 5
+  year: 1970
+  rating: 6
+
+- id: 5
+  name: Outer Space
+  director: 6
+  year: 1999
+  rating: 4
+
+- id: 6
+  name: The Loneliness of the Long Distance Runner
+  director: 7
+  year: 1962
+  rating: 7
+
+- id: 7
+  name: A Diary for Timothy
+  director: 8
+  year: 1945
+  rating: 7
