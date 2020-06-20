@@ -25,6 +25,10 @@ main article article ul {
   list-style: none;
 }
 
+main article article ul ul {
+  list-style: square;
+}
+
 main article article li + li {
   padding-top: 1rem;
 }
