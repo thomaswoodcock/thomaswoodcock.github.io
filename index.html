@@ -25,8 +25,8 @@ title: Home
       {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
       1 %}
       <li>
-        <h3>{{ album.person }}</h3>
-        <h4>({{ album.year }}) {{ album.name }}</h4>
+        <h3>{{ album.person | join: " & " }}</h3>
+        <h4>{{ album.name }}</h4>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}
@@ -39,8 +39,8 @@ title: Home
       {% for film in films limit: 3 %}{% assign rating = film.rating | minus: 1
       %}
       <li>
-        <h3>{{ film.person }}</h3>
-        <h4>({{ film.year }}) {{ film.name }}</h4>
+        <h3>{{ film.person | join: " & " }}</h3>
+        <h4>{{ film.name }}</h4>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}

@@ -21,6 +21,18 @@ main article article + article {
   padding-top: 1.5rem;
 }
 
+main article article ul {
+  list-style: none;
+}
+
+main article article li + li {
+  padding-top: 1rem;
+}
+
+main article article p {
+  font-size: 0.8rem;
+}
+
 nav ul {
   list-style: none;
   padding-left: 0;
