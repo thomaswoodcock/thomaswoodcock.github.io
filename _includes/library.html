@@ -4,7 +4,8 @@
   %}
   <article>
     <h2>{{ person.name }}</h2>
-    {% assign works = workdata | where: "id", person.id | sort: "year" %}
+    {% assign works = workdata | where_exp: "work", "work.person contains
+    person.id" | sort: "year" %}
     <ul>
       <li>
         {% for work in works %}{% assign rating = work.rating | minus: 1 %}({{
