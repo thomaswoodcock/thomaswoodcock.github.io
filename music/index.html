@@ -4,10 +4,10 @@ title: Music
 ---
 
 <h1>{{ page.title }}</h1>
-<ul>
+<article>
   {% assign people = site.data.artists | sort_natural: "name" %} {% for person
   in people %}
-  <li>
+  <article>
     <h2>{{ person.name }}</h2>
     {% assign works = site.data.albums | where: "id", person.id | sort: "year"
     %}
@@ -17,6 +17,6 @@ title: Music
         work.rating }}{% endfor %}
       </li>
     </ul>
-  </li>
+  </article>
   {% endfor %}
-</ul>
+</article>
