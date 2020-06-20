@@ -54,6 +54,7 @@ article article p span {
 h1 {
   font-size: 3rem;
   padding-bottom: 2rem;
+  line-height: 1;
 }
 
 a {
@@ -77,4 +78,14 @@ time {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 0.35rem;
+  }
 }
