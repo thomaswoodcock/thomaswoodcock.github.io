@@ -7,20 +7,27 @@ title: Home
 <article>
   <article>
     <h2>Latest Diary Entries</h2>
-    {% for post in site.posts limit:3 %}
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <time datetime="{{ post.date }}"
-      >{{ post.date | date_to_long_string: "ordinal" }}</time
-    >
-    {% endfor %}
+    <ul>
+      {% for post in site.posts limit:3 %}
+      <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <time datetime="{{ post.date }}"
+          >{{ post.date | date_to_long_string: "ordinal" }}</time
+        >
+      </li>
+      {% endfor %}
+    </ul>
   </article>
   <article>
     <h2>Latest Album Ratings</h2>
     {% assign albums = site.data.albums | reverse %}
     <ul>
-      {% for album in albums limit: 3 %}
+      {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
+      1 %}
       <li>
-        {{ album.name }} ({{ album.year }})
+        <h3>{{ album.person }}</h3>
+        <h4>({{ album.year }}) {{ album.name }}</h4>
+        <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}
     </ul>
@@ -29,9 +36,12 @@ title: Home
     <h2>Latest Film Ratings</h2>
     {% assign films = site.data.films | reverse %}
     <ul>
-      {% for film in films limit: 3 %}
+      {% for film in films limit: 3 %}{% assign rating = film.rating | minus: 1
+      %}
       <li>
-        {{ film.name }} ({{ film.year }})
+        <h3>{{ film.person }}</h3>
+        <h4>({{ film.year }}) {{ film.name }}</h4>
+        <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}
     </ul>
