@@ -1,0 +1,29 @@
+- id: 1
+  name: Experience
+  artist: 1
+  year: 1992
+  rating: 7
+
+- id: 2
+  name: One World
+  artist: 2
+  year: 1977
+  rating: 7
+
+- id: 3
+  name: Better Living Through Chemistry
+  artist: 3
+  year: 1996
+  rating: 6
+
+- id: 4
+  name: East Broadway Run Down
+  artist: 4
+  year: 1966
+  rating: 4
+
+- id: 5
+  name: This Here Is Bobby Timmons
+  artist: 5
+  year: 1960
+  rating: 6
