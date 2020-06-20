@@ -60,6 +60,10 @@ a {
   color: inherit;
 }
 
+time {
+  font-style: italic;
+}
+
 :focus {
   outline: 0.125rem solid #111111;
   outline-offset: 0.125rem;
