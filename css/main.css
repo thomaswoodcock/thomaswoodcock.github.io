@@ -16,6 +16,8 @@ footer {
 
 main article article + article {
   border-top: 2px dotted #111111;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 nav ul {
