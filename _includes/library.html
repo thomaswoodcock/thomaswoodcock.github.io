@@ -4,15 +4,17 @@
   %}
   <article>
     <h2>{{ person.name }}</h2>
-    {% assign works = workdata | where_exp: "work", "work.person contains
-    person.id" | sort: "year" %}
+    {% assign grouped_works = workdata | where_exp: "work", "work.person
+    contains person.id" | group_by: "rating" | sort: "name" | reverse %}{% for
+    rating_group in grouped_works %}{% assign rating = rating_group.name |
+    minus: 1 %}
+    <h3>{{ rating }}</h3>
     <ul>
-      <li>
-        {% for work in works %}{% assign rating = work.rating | minus: 1 %}({{
-        work.year }}) {{ work.name }} - {{ site.data.ratings[rating] | upcase
-        }}{% endfor %}
-      </li>
+      {% for work in rating_group %}
+      <li>({{ work.year }}) {{ work.name }}</li>
+      {% endfor %}
     </ul>
+    {% endfor %}
   </article>
   {% endfor %}
 </article>
