@@ -14,7 +14,7 @@ title: Music
     <ul>
       <li>
         {% for work in works %}({{ work.year }}) {{ work.name }} - {{
-        work.rating }}{% endfor %}
+        site.data.ratings[work.rating - 1] | upcase }}{% endfor %}
       </li>
     </ul>
   </article>
