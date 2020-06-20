@@ -5,12 +5,9 @@ title: Music
 
 <h1>Music</h1>
 <ul>
-  {% for album_artist in site.data.artists.items %} {% if album_artist.name %}
-  {% assign artist_name = album_artist.name %} {% else %} {% capture artist_name
-  %}{{ album_artist.surname }}, {{ album_artist.forename }}{% endcapture %} {%
-  endif %}
+  {% for album_artist in site.data.artists.items %}
   <li>
-    <h2>{{ artist_name }}</h2>
+    <h2>{{ album_artist.name }}</h2>
   </li>
   {% endfor %}
 </ul>
