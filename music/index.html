@@ -8,8 +8,7 @@ title: Music
   {% for album_artist in site.data.artists | sort_natural %}
   <li>
     <h2>{{ album_artist.name }}</h2>
-    {% assign albums = site.data.albums | where_exp: "album", "album.artist |
-    split ',' | contains album_artist.id" %}
+    {% assign albums = site.data.albums | where "id", album_artist.id %}
     <li>
     {% for artist_album in albums %}
     {{ artist_album.name }}
