@@ -6,8 +6,8 @@
   {% assign people = peopledata | sort_natural: "name" %}
   <ul>
     {% for person in people %}
-    <li>
-      <article class="content-section">
+    <li class="content-section">
+      <article>
         <h2>{{ person.name }}</h2>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.person
