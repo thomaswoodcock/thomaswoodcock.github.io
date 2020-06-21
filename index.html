@@ -32,7 +32,9 @@ title: Home
       {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
       1 %}{% assign artists = "" | split: "" %}{% for artist_id in album.person
       %}{% assign artist = site.data.artists | where: "id", artist_id | first
-      %}{% assign artists = artists | push: artist.name %}{% endfor %}
+      %}{% assign slug = artist.name | slugify %} {% capture link %}
+      <a href="/albums/#{{ slug }}">{{ artist.name }}</a>
+      {% endcapture %}{% assign artists = artists | push: link %}{% endfor %}
       <li>
         <header>
           <h3>{{ artists | join: " & " }}</h3>
