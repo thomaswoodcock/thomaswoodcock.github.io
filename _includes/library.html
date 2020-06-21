@@ -1,13 +1,13 @@
-<header>
+<header class="header">
   <h1>{{ page.title }}</h1>
   <p>{{ page.description }}</p>
 </header>
-<article>
+<article class="content">
   {% assign people = peopledata | sort_natural: "name" %}
   <ul>
     {% for person in people %}
     <li>
-      <article>
+      <article class="content-section">
         <h2>{{ person.name }}</h2>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.person

@@ -3,12 +3,12 @@ layout: default
 title: Home
 ---
 
-<header>
+<header class="header">
   <h1>Thomas Woodcock</h1>
   <p>This is where I write about learning, and rate albums and films.</p>
 </header>
-<article>
-  <article>
+<article class="content">
+  <article class="content-section">
     <h2>Latest Diary Entries</h2>
     <ul>
       {% for post in site.posts limit:3 %}
@@ -25,7 +25,7 @@ title: Home
       {% endfor %}
     </ul>
   </article>
-  <article>
+  <article class="content-section">
     <h2>Latest Album Ratings</h2>
     {% assign albums = site.data.albums | reverse %}
     <ul>
@@ -43,7 +43,7 @@ title: Home
       {% endfor %}
     </ul>
   </article>
-  <article>
+  <article class="content-section">
     <h2>Latest Film Ratings</h2>
     {% assign films = site.data.films | reverse %}
     <ul>
