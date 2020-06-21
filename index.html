@@ -28,11 +28,11 @@ title: Home
     <ul>
       {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
       1 %}{% assign artists = "" | split: "" %}{% for artist_id in album.person
-      %}{% assign artist = site.data.artists | where: "id", artist_id %}{{
-      artist | jsonify }}{% endfor %}
+      %}{% assign artist = site.data.artists | where: "id", artist_id | first
+      %}{% assign artists = artists | push: artist.name %}{% endfor %}
       <li>
         <header>
-          <h3>{{ album.person | join: " & " }}</h3>
+          <h3>{{ artists | join: " & " }}</h3>
           <h4>{{ album.name }}</h4>
         </header>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
@@ -45,10 +45,13 @@ title: Home
     {% assign films = site.data.films | reverse %}
     <ul>
       {% for film in films limit: 3 %}{% assign rating = film.rating | minus: 1
+      %}{% assign directors = "" | split: "" %}{% for director_id in film.person
+      %}{% assign director = site.data.directors | where: "id", director_id |
+      first %}{% assign directors = directors | push: director.name %}{% endfor
       %}
       <li>
         <header>
-          <h3>{{ film.person | join: " & " }}</h3>
+          <h3>{{ directors | join: " & " }}</h3>
           <h4>{{ film.name }}</h4>
         </header>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
