@@ -2,8 +2,8 @@
   --border-thin: var(--s-5);
   --color-dark: #111111;
   --color-light: #fafafa;
-  --font-sans: "Lato", sans-serif;
-  --font-serif: "Domine", serif;
+  --font-sans: sans-serif;
+  --font-serif: serif;
   --line-height: var(--ratio);
   --line-height-small: calc(0.8 * var(--ratio));
   --ratio: 1.4;
