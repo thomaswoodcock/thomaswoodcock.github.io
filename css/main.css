@@ -87,11 +87,6 @@ main > header {
   padding: var(--s1);
 }
 
-main > article {
-  padding-left: var(--s2);
-  padding-right: var(--s2);
-}
-
 main > article > p {
   margin-top: var(--s0);
 }
@@ -139,6 +134,8 @@ main > header > * {
   margin-left: auto;
   margin-right: auto;
   max-width: 35rem;
+  padding-left: var(--s2);
+  padding-right: var(--s2);
 }
 
 footer {
