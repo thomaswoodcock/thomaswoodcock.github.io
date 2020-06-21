@@ -1,7 +1,7 @@
 :root {
   --border-thin: var(--s-5);
-  --color-dark: #111111;
-  --color-light: #fafafa;
+  --color-dark: #252525;
+  --color-light: #f5f5f5;
   --font-sans: "Lato", Arial, Helvetica, sans-serif;
   --font-serif: "Lora", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   --line-height: var(--ratio);
@@ -76,12 +76,20 @@ nav > ul > li:first-child > a {
   text-decoration: none;
 }
 
-main {
-  padding: var(--s2);
-}
-
 main > * + * {
   margin-top: var(--s3);
+}
+
+main > header {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  max-width: 100%;
+  padding: var(--s1);
+}
+
+main > article {
+  padding-left: var(--s2);
+  padding-right: var(--s2);
 }
 
 main > article > p {
@@ -125,7 +133,8 @@ main > article > ul > li > article > ul > li > section > ul {
 }
 
 footer,
-main > * {
+main > *,
+main > header > * {
   display: block;
   margin-left: auto;
   margin-right: auto;
