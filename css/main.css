@@ -127,7 +127,7 @@ main > article > ul > li > article > p > span {
 
 main > article > article > ul > * + *,
 main > article > ul > li > article > ul > li > section > ul {
-  margin-top: var(--s0);
+  margin-top: var(--s2);
 }
 
 main > article > ul > li > article > ul > li > section > ul {
