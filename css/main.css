@@ -76,6 +76,16 @@ nav > ul > li:first-child > a {
   text-decoration: none;
 }
 
+@media (max-width: 600px) {
+  nav > ul {
+    text-align: center;
+  }
+
+  nav > ul > li {
+    margin: var(--s-2);
+  }
+}
+
 main {
   padding: var(--s2);
 }
