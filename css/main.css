@@ -70,6 +70,10 @@ nav > ul > li:first-child > a {
   text-decoration: none;
 }
 
+main {
+  padding: var(--s2);
+}
+
 main > * + * {
   margin-top: var(--s3);
 }
