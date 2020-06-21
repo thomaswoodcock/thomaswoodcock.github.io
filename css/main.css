@@ -53,12 +53,6 @@
   outline-offset: var(--border-thin);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-
 nav > ul {
   list-style: none;
   padding: var(--s-1);
@@ -74,68 +68,6 @@ nav > ul > li {
 nav > ul > li:first-child > a {
   font-family: var(--font-serif);
   text-decoration: none;
-}
-
-main > * + * {
-  margin-top: var(--s3);
-}
-
-main > header {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  max-width: 100%;
-  padding: var(--s1);
-}
-
-main > article > p {
-  margin-top: var(--s0);
-}
-
-main > article > ul {
-  list-style: none;
-}
-
-main > article > article + article,
-main > article > ul > * + * {
-  border-top: 2px dotted var(--color-dark);
-  margin-top: var(--s3);
-  padding-top: var(--s2);
-}
-
-main > article > article > ul,
-main > article > ul > li > article > ul {
-  list-style: none;
-  padding-left: var(--s-2);
-  margin-top: var(--s2);
-}
-
-main > article > ul > li > article > * + * {
-  margin-top: var(--s-1);
-}
-
-main > article > ul > li > article > p > span {
-  font-family: var(--font-serif);
-  padding-left: var(--s-4);
-}
-
-main > article > article > ul > * + *,
-main > article > ul > li > article > ul > li > section + section {
-  margin-top: var(--s2);
-}
-
-main > article > ul > li > article > ul > li > section > ul {
-  padding-left: var(--s0);
-}
-
-footer,
-main > *,
-main > header > * {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 35rem;
-  padding-left: var(--s2);
-  padding-right: var(--s2);
 }
 
 footer {
@@ -179,6 +111,85 @@ time {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+.header {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  max-width: 100%;
+  padding: var(--s1);
+}
+
+.header + .content {
+  margin-top: var(--s3);
+}
+
+.header > * + * {
+  margin-top: var(--s-3);
+}
+
+.content,
+.header > *,
+footer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35rem;
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+}
+
+.content > p + p {
+  margin-top: var(--s0);
+}
+
+.content > ul {
+  list-style: none;
+}
+
+.content-section + .content-section {
+  border-top: 2px dotted var(--color-dark);
+  margin-top: var(--s3);
+  padding-top: var(--s2);
+}
+
+.content-section > * + * {
+  margin-top: var(--s-1);
+}
+
+.content-section > p > span {
+  font-family: var(--font-serif);
+  padding-left: var(--s-4);
+}
+
+.content-section > article > ul {
+  list-style: none;
+  padding-left: var(--s-2);
+  margin-top: var(--s2);
+}
+
+.content-section > article > ul > li > section > ul {
+  padding-left: var(--s0);
+}
+
+.content-section > article > ul > li > section + section {
+  margin-top: var(--s2);
+}
+
+.content-section > ul {
+  list-style: none;
+  margin-top: var(--s2);
+  padding-left: var(--s-2);
+}
+
+.content-section > ul > li + li {
+  margin-top: var(--s2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 @media (max-width: 600px) {
