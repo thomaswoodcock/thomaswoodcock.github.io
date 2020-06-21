@@ -117,7 +117,8 @@ time {
   background-color: var(--color-dark);
   color: var(--color-light);
   max-width: 100%;
-  padding: var(--s1);
+  padding-bottom: var(--s1);
+  padding-top: var(--s1);
 }
 
 .header + .content {
