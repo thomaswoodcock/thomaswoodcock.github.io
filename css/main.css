@@ -3,7 +3,7 @@
   --color-dark: #111111;
   --color-light: #fafafa;
   --font-sans: "Lato", sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --font-serif: "Domine", serif;
   --line-height: var(--ratio);
   --line-height-small: calc(0.8 * var(--ratio));
   --ratio: 1.4;
