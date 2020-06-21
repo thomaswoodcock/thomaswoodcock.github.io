@@ -169,15 +169,6 @@ footer {
   margin-top: var(--s2);
 }
 
-.content-section > article > h2 {
-  display: inline-block;
-}
-
-.content-section > article > a {
-  font-size: var(--s3);
-  padding-left: var(--s-4);
-}
-
 .content-section > article > ul > li > section > ul {
   padding-left: var(--s0);
 }
