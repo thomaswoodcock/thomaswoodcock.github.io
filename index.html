@@ -28,8 +28,8 @@ title: Home
     <ul>
       {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
       1 %}{% assign artists = "" | split: "" %}{% for artist_id in album.person
-      %}{% assign artist = site.data.artists | find: "id", artist_id %}{{
-      artist.name }}{% endfor %}
+      %}{% assign artist = site.data.artists | find: "id", artist_id %}{{ artist
+      | jsonify }}{% endfor %}
       <li>
         <header>
           <h3>{{ album.person | join: " & " }}</h3>
