@@ -19,8 +19,8 @@ Similarly, the Films page is a list of films I have watched and rated. For films
 [TSPDT]()'s _1,000 Greatest Films_ which, again, I am working through from bottom to top.
 
 Both the Albums and Films pages use Jekyll and Liquid to read YAML data files and generate HTML lists of artists,
-directors and their respective works. When I watched a film, or listened to an album, I just update the YAML files and
-Jekyll will do the rest.
+directors and their respective works. When I have watched a film, or listened to an album, I just
+update the YAML files and Jekyll will do the rest.
 
 I have tried to use
 [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics#Semantics_in_HTML) throughout the
