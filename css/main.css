@@ -91,6 +91,10 @@ h2 {
   font-size: var(--s3);
 }
 
+h2 > a {
+  line-height: var(--line-height);
+}
+
 h3 {
   font-size: var(--s2);
 }
@@ -166,7 +170,7 @@ footer {
 .content-section > article > ul {
   list-style: none;
   padding-left: var(--s-2);
-  margin-top: var(--s2);
+  margin-top: var(--s1);
 }
 
 .content-section > article > ul > li > section > ul {
