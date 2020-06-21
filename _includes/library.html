@@ -1,25 +1,31 @@
 <h1>{{ page.title }}</h1>
 <article>
-  {% assign people = peopledata | sort_natural: "name" %}{% for person in people
-  %}
-  <article>
-    <h2>{{ person.name }}</h2>
-    <ul>
-      {% assign grouped_works = workdata | where_exp: "work", "work.person
-      contains person.id" | group_by: "rating" | sort: "name" | reverse %}{% for
-      rating_group in grouped_works %}{% assign rating = rating_group.name |
-      minus: 1 %}
-      <li>
-        <h3>{{ site.data.ratings[rating] | upcase }}</h3>
+  {% assign people = peopledata | sort_natural: "name" %}
+  <ul>
+    {% for person in people %}
+    <li>
+      <article>
+        <h2>{{ person.name }}</h2>
         <ul>
-          {% assign sorted_works = rating_group.items | sort: "year" %}{% for
-          work in sorted_works %}
-          <li>{{ work.name }} ({{ work.year }})</li>
+          {% assign grouped_works = workdata | where_exp: "work", "work.person
+          contains person.id" | group_by: "rating" | sort: "name" | reverse %}{%
+          for rating_group in grouped_works %}{% assign rating =
+          rating_group.name | minus: 1 %}
+          <li>
+            <section>
+              <h3>{{ site.data.ratings[rating] | upcase }}</h3>
+              <ul>
+                {% assign sorted_works = rating_group.items | sort: "year" %}{%
+                for work in sorted_works %}
+                <li>{{ work.name }} ({{ work.year }})</li>
+                {% endfor %}
+              </ul>
+            </section>
+          </li>
           {% endfor %}
         </ul>
-      </li>
-      {% endfor %}
-    </ul>
-  </article>
-  {% endfor %}
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
 </article>

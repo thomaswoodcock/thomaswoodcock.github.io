@@ -10,10 +10,14 @@ title: Home
     <ul>
       {% for post in site.posts limit:3 %}
       <li>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <time datetime="{{ post.date }}"
-          >{{ post.date | date_to_long_string: "ordinal" }}</time
-        >
+        <header>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>
+            <time datetime="{{ post.date }}"
+              >{{ post.date | date_to_long_string: "ordinal" }}</time
+            >
+          </p>
+        </header>
       </li>
       {% endfor %}
     </ul>
@@ -25,8 +29,10 @@ title: Home
       {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
       1 %}
       <li>
-        <h3>{{ album.person | join: " & " }}</h3>
-        <h4>{{ album.name }}</h4>
+        <header>
+          <h3>{{ album.person | join: " & " }}</h3>
+          <h4>{{ album.name }}</h4>
+        </header>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}
@@ -39,8 +45,10 @@ title: Home
       {% for film in films limit: 3 %}{% assign rating = film.rating | minus: 1
       %}
       <li>
-        <h3>{{ film.person | join: " & " }}</h3>
-        <h4>{{ film.name }}</h4>
+        <header>
+          <h3>{{ film.person | join: " & " }}</h3>
+          <h4>{{ film.name }}</h4>
+        </header>
         <p>{{ site.data.ratings[rating] | upcase }}</p>
       </li>
       {% endfor %}
