@@ -76,16 +76,6 @@ nav > ul > li:first-child > a {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
-  nav > ul {
-    text-align: center;
-  }
-
-  nav > ul > li {
-    margin: var(--s-2);
-  }
-}
-
 main {
   padding: var(--s2);
 }
@@ -185,4 +175,22 @@ time {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+@media (max-width: 600px) {
+  nav > ul {
+    text-align: center;
+  }
+
+  nav > ul > li {
+    margin: var(--s-2);
+  }
+
+  nav > ul > li:first-child {
+    display: block;
+  }
+
+  h1 {
+    font-size: var(--s3);
+  }
 }
