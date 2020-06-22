@@ -53,6 +53,10 @@
   outline-offset: var(--border-thin);
 }
 
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
 nav > ul {
   list-style: none;
   padding: var(--s-1);
