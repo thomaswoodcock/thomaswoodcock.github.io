@@ -22,8 +22,12 @@ Both the Albums and Films pages use Jekyll and Liquid to read YAML data files an
 directors and their respective works. When I have watched a film, or listened to an album, I just
 update the YAML files and Jekyll will do the rest.
 
+The homepage has also been updated and now shows the three latest diary entries, album ratings and film ratings.
+
 I have tried to use
 [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics#Semantics_in_HTML) throughout the
 website, while also styling the elements in a simple, accessible way. I was inspired by the designs of
 [Inclusive Components](https://inclusive-components.design/), [Every Layout](https://every-layout.dev/) and
 [Andy Bell](https://hankchizljaw.com/).
+
+It's not perfect, and will be tweaked continuouly, but it does its job.
