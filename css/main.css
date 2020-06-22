@@ -157,7 +157,7 @@ footer {
   padding-top: var(--s2);
 }
 
-.content-section > p > span {
+.content-section > article > p > span {
   font-family: var(--font-serif);
   padding-left: var(--s-4);
 }
