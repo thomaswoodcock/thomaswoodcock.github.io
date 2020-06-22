@@ -13,7 +13,7 @@ I added a couple more sections to the site in order to use the functionality tha
 [Albums](/albums) and [Films](/films).
 
 The Albums page is a list of music albums that I have listened to and rated. These albums are selected from
-[Acclaimed Music](http://acclaimedmusic.net/) as I work my way through the _All Time Top 3,000_ in ascending order.
+[Acclaimed Music](http://acclaimedmusic.net/) as I work my way through the _All Time Top 3,000_ in descending order.
 
 Similarly, the Films page is a list of films I have watched and rated. For films, I use
 [TSPDT]()'s _1,000 Greatest Films_ which, again, I am working through from bottom to top.
