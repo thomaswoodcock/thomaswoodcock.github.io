@@ -30,4 +30,4 @@ website, while also styling the elements in a simple, accessible way. I was insp
 [Inclusive Components](https://inclusive-components.design/), [Every Layout](https://every-layout.dev/) and
 [Andy Bell](https://hankchizljaw.com/).
 
-It's not perfect, and will be tweaked continuouly, but it does its job.
+It's not perfect, and will be tweaked continuously, but it does its job.
