@@ -4,7 +4,8 @@ title: "A Site Aside"
 date: 2020-06-21
 ---
 
-I thought I would play around with the website before I begin my learning journey.
+I thought I would play around with the website before I begin my
+[learning journey]({% post_url 2020-06-18-first-post %}).
 I spent some time over the weekend looking at [Jekyll](https://jekyllrb.com/) and
 [Liquid](https://shopify.github.io/liquid/), the static-site generator and template language, respectively, that are
 provided by default for [GitHub Pages](https://pages.github.com/) projects.
