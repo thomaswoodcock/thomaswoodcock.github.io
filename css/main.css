@@ -120,7 +120,6 @@ time {
 .header {
   background-color: var(--color-dark);
   color: var(--color-light);
-  max-width: 100%;
   padding-bottom: var(--s1);
   padding-top: var(--s1);
 }
@@ -158,10 +157,6 @@ footer {
   padding-top: var(--s2);
 }
 
-.content-section > * + * {
-  margin-top: var(--s-1);
-}
-
 .content-section > p > span {
   font-family: var(--font-serif);
   padding-left: var(--s-4);
@@ -189,6 +184,10 @@ footer {
 
 .content-section > ul > li + li {
   margin-top: var(--s2);
+}
+
+.content-section > article > header + p {
+  margin-top: var(--s0);
 }
 
 @media (prefers-reduced-motion: no-preference) {
