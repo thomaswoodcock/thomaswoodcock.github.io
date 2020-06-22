@@ -190,6 +190,15 @@ footer {
   margin-top: var(--s0);
 }
 
+.content-section > article > header > h2 {
+  display: inline;
+}
+
+.content-section > article > header > a {
+  font-size: var(--s2);
+  padding-left: var(--s-4);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

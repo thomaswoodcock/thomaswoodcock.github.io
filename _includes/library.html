@@ -10,7 +10,7 @@
       <article>
         <header>
           <h2 id="{{ slug }}">{{ person.name }}</h2>
-          <a href="#{{ slug}}">#</a>
+          <a href="#{{ slug}}" aria-label="link to {{ person.name}}">#</a>
         </header>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.person
