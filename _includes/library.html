@@ -8,7 +8,10 @@
     {% for person in people %} {% assign slug = person.name | slugify %}
     <li class="content-section">
       <article>
-        <h2 id="{{ slug }}"><a href="#{{ slug }}">{{ person.name }}</a></h2>
+        <header>
+          <h2 id="{{ slug }}">{{ person.name }}</h2>
+          <a href="#{{ slug}}">#</a>
+        </header>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.person
           contains person.id" | group_by: "rating" | sort: "name" | reverse %}{%
