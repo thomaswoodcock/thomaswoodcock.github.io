@@ -32,3 +32,10 @@
     - 5
   year: 1960
   rating: 6
+
+- id: 6
+  name: Milo Goes to College
+  person:
+    - 6
+  year: 1982
+  rating: 6
