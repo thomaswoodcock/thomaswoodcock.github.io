@@ -21,6 +21,9 @@ title: Home
             >
           </p>
         </header>
+        {% if post.description %}
+        <p>{{ post.description }}</p>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
