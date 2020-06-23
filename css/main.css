@@ -173,11 +173,6 @@ footer {
   padding-top: var(--s2);
 }
 
-.content-section > article > p > span {
-  font-family: var(--font-serif);
-  padding-left: var(--s-4);
-}
-
 .content-section > article > ul {
   list-style: none;
   padding-left: var(--s-2);

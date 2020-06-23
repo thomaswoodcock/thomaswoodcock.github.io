@@ -2,6 +2,7 @@
 layout: post
 title: "The First Post"
 date: 2020-06-18
+description: "I am starting a new learning journey."
 ---
 
 I am a full-time software developer.

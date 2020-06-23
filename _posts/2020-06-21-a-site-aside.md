@@ -2,6 +2,7 @@
 layout: post
 title: "A Site Aside"
 date: 2020-06-21
+description: "Building the website using Jekyll and Liquid."
 ---
 
 I thought I would play around with the website before I begin my
