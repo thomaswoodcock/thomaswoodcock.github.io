@@ -12,11 +12,17 @@ title: Diary
     {% for post in paginator.posts %}
     <li class="content-section">
       <article>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <header>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p>
+            <time datetime="{{ post.date }}"
+              >{{ post.date | date_to_long_string: "ordinal" }}</time
+            >
+          </p>
+        </header>
         <p>
-          <time datetime="{{ post.date }}"
-            >{{ post.date | date_to_long_string: "ordinal" }}</time
-          >
+          {{ post.content | strip_html | truncatewords: 50 }}
+          <span><a href="{{ post.url }}">Continue Reading</a></span>
         </p>
       </article>
     </li>
