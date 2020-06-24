@@ -148,6 +148,21 @@ time {
   margin-top: var(--s-3);
 }
 
+.header > ul {
+  margin-top: var(--s0);
+}
+
+.header > ul > h2 {
+  display: inline-block;
+  font-size: var(--s0);
+}
+
+.header > ul > li {
+  display: inline-block;
+  margin-left: var(--s-2);
+  margin-right: var(--s-2);
+}
+
 .content,
 .header > *,
 footer {
