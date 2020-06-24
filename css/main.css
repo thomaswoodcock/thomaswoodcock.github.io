@@ -152,7 +152,7 @@ time {
   margin-top: var(--s0);
 }
 
-.header > ul > h3 {
+.header > ul > h2 {
   display: inline-block;
   font-size: var(--s0);
 }
