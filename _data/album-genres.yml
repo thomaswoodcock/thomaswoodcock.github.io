@@ -15,3 +15,51 @@
 
 - id: 6
   name: Jazz Fusion
+
+- id: 7
+  name: Big Beat
+
+- id: 8
+  name: Post-Bop
+
+- id: 9
+  name: Avant-Garde Jazz
+
+- id: 10
+  name: Free Jazz
+
+- id: 11
+  name: Hard Bop
+
+- id: 12
+  name: Soul Jazz
+
+- id: 13
+  name: Cool Jazz
+
+- id: 14
+  name: Hardcore Punk
+
+- id: 15
+  name: Skate Punk
+
+- id: 16
+  name: Pop Punk
+
+- id: 17
+  name: Melodic Hardcore
+
+- id: 18
+  name: Dream Pop
+
+- id: 19
+  name: Ambient Pop
+
+- id: 20
+  name: Jazz Pop
+
+- id: 21
+  name: Lounge
+
+- id: 22
+  name: Ethereal Wave
