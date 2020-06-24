@@ -5,12 +5,12 @@
 <article class="content">
   {% assign people = peopledata | sort_natural: "name" %}
   <ul>
-    {% for person in people %} {% assign slug = person.name | slugify %}
+    {% for person in people %}{% assign slug = person.name | slugify %}
     <li class="content-section">
       <article>
         <header>
           <h2 id="{{ slug }}">{{ person.name }}</h2>
-          <a href="#{{ slug}}" aria-label="link to {{ person.name}}">#</a>
+          <a href="#{{ slug }}" aria-label="link to {{ person.name }}">#</a>
         </header>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.person
