@@ -26,9 +26,7 @@
                 %}{% for person_id in work.person %}{% assign person =
                 persondata | where: "id", person_id | first %}{% assign slug =
                 person.name | slugify %}{% capture link %}
-                <a href="/{{ page.title | downcase }}/#{{ slug }}"
-                  >{{ person.name }}</a
-                >
+                <a href="{{ peoplepath }}/#{{ slug }}">{{ person.name }}</a>
                 {% endcapture %}{% assign people = people | push: link %}{%
                 endfor %}
                 <li>
