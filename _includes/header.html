@@ -4,9 +4,9 @@
       <li>
         <a href="/">Thomas Woodcock <span class="hidden">Home</span></a>
       </li>
-      <li><a href="/diary">Diary</a></li>
-      <li><a href="/albums">Albums</a></li>
-      <li><a href="/films">Films</a></li>
+      {% for page in site.data.pages %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
     </ul>
   </nav>
 </header>
