@@ -11,6 +11,11 @@
         <header>
           <h2 id="{{ slug }}">{{ genre.name }}</h2>
           <a href="#{{ slug }}" aria-label="link to {{ genre.name }}">#</a>
+          <ul>
+            <h3>VIEW MODES</h3>
+            <li><a href="{{ peoplepath }}">{{ persontitle }}</a></li>
+            <li>Genre</li>
+          </ul>
         </header>
         <ul>
           {% assign grouped_works = workdata | where_exp: "work", "work.genre
