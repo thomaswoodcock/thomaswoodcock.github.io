@@ -22,12 +22,12 @@
               <h3>{{ site.data.ratings[rating] | upcase }}</h3>
               <ul>
                 {% assign sorted_works = rating_group.items | sort: "year" %}{%
-                for work in sorted_works %}{% assign people = "" | split "" %}{%
-                for person_id in work.person %}{% assign person = persondata |
-                where: "id", person_id | first %}{% assign people = people |
-                push: person.name %}{% endfor %}
+                for work in sorted_works %}{% assign people = "" | split: ""
+                %}{% for person_id in work.person %}{% assign person =
+                persondata | where: "id", person_id | first %}{% assign people =
+                people | push: person.name %}{% endfor %}
                 <li>
-                  {{ people | join: " & "}} - {{ work.name }} ({{ work.year }})
+                  {{ people | join: " & " }} - {{ work.name }} ({{ work.year }})
                 </li>
                 {% endfor %}
               </ul>
