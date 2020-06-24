@@ -75,3 +75,15 @@
     - 21
     - 22
   rating: 7
+
+- id: 8
+  name: How the West Was Won
+  person:
+    - 8
+  year: 2003
+  genre:
+    - 23
+    - 24
+    - 25
+    - 26
+  rating: 7
