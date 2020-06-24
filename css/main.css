@@ -193,12 +193,16 @@ footer {
   margin-top: var(--s1);
 }
 
+.content-section > article > ul > li + li {
+  margin-top: var(--s2);
+}
+
 .content-section > article > ul > li > section > ul {
   padding-left: var(--s0);
 }
 
-.content-section > article > ul > li > section + section {
-  margin-top: var(--s2);
+.content-section > article > ul > li > section > ul > li {
+  margin-top: var(--s-3);
 }
 
 .content-section > ul {
