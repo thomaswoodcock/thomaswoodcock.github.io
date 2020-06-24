@@ -12,6 +12,9 @@
   person:
     - 2
   year: 1933
+  genre:
+    - 2
+    - 3
   rating: 5
 
 - id: 3
@@ -20,6 +23,8 @@
     - 3
     - 4
   year: 1981
+  genre:
+    - 4
   rating: 4
 
 - id: 4
@@ -27,6 +32,9 @@
   person:
     - 5
   year: 1970
+  genre:
+    - 1
+    - 5
   rating: 6
 
 - id: 5
@@ -34,6 +42,8 @@
   person:
     - 6
   year: 1999
+  genre:
+    - 6
   rating: 4
 
 - id: 6
@@ -41,6 +51,9 @@
   person:
     - 7
   year: 1962
+  genre:
+    - 1
+    - 7
   rating: 7
 
 - id: 7
@@ -48,4 +61,6 @@
   person:
     - 8
   year: 1945
+  genre:
+    - 4
   rating: 7
