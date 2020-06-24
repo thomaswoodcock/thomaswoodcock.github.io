@@ -3,6 +3,12 @@
 
 - title: Albums
   url: /albums
+  subpages:
+    - url: /albums/artists
+    - url: /albums/genres
 
 - title: Films
   url: /films
+  subpages:
+    - url: /films/directors
+    - url: /films/genres
