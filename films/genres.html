@@ -1,0 +1,10 @@
+---
+layout: default
+title: Films
+description: "A list of films I have watched and rated."
+---
+
+{% assign persontitle = "Director" %}{% assign genredata = site.data.film-genres
+%}{% assign workdata = site.data.films %}{% assign persondata =
+site.data.directors %}{% assign peoplepath = "/films" %}{% include
+library-by-genre.html %}
