@@ -4,7 +4,7 @@ title: Albums
 description: "A list of albums I have listened to and rated."
 ---
 
-{% assign persontitle = "Artist" %}{% assign genredata = site.data.album-genres
-%}{% assign workdata = site.data.albums %}{% assign persondata =
-site.data.artists %}{% assign peoplepath = "/albums" %}{% include
-library-by-genre.html %}
+{% include components/header.html %}
+<article class="content">
+  {% include containers/albums-by-genre.html %}
+</article>

@@ -1,0 +1,3 @@
+{% assign genres = site.data.album-genres | sort_natural: "name" %}{% include
+components/genre-list.html genres=genres works=site.data.albums
+ratings=site.data.ratings people=site.data.artists peoplepath="/albums" %}
