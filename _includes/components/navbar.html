@@ -4,7 +4,11 @@
       <a href="/">Thomas Woodcock <span class="hidden">Home</span></a>
     </li>
     {% for link in include.links %}
-    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    <li>
+      {% if link.url %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      {% else %}{{ link.title }}{% endif %}
+    </li>
     {% endfor %}
   </ul>
 </nav>
