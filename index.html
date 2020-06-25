@@ -13,24 +13,6 @@ where I write about learning, and rate albums and films." %}
     {% include containers/latest-album-ratings.html %}
   </article>
   <article class="content-section">
-    <h2>Latest Film Ratings</h2>
-    {% assign films = site.data.films | reverse %}
-    <ul>
-      {% for film in films limit: 3 %}{% assign rating = film.rating | minus: 1
-      %}{% assign directors = "" | split: "" %}{% for director_id in film.person
-      %}{% assign director = site.data.directors | where: "id", director_id |
-      first %}{% assign slug = director.name | slugify %}{% capture link %}
-      <a href="/films/#{{ slug }}">{{ director.name }}</a>
-      {% endcapture %}{% assign directors = directors | push: link %}{% endfor
-      %}
-      <li>
-        <header>
-          <h3>{{ directors | join: " & " }}</h3>
-          <h4>{{ film.name }}</h4>
-        </header>
-        <p>{{ site.data.ratings[rating] | upcase }}</p>
-      </li>
-      {% endfor %}
-    </ul>
+    {% include containers/latest-film-ratings.html %}
   </article>
 </article>

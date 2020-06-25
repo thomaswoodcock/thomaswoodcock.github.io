@@ -1,0 +1,4 @@
+{% assign works = site.data.films | reverse | slice:0, 3 %}
+<h2>Latest Film Ratings</h2>
+{% include components/rating-list.html works=works people=site.data.directors
+ratings=site.data.ratings workpath="/films" %}
