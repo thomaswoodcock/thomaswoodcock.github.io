@@ -5,7 +5,7 @@ layout: default
 <time datetime="{{ page.date }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
 {% endcapture %}
 <article>
-  {% include components/header.html title=page.title subtitle=date %}
+  {% include components/header.html subtitle=date %}
   <div class="content">
     {{content}}
   </div>
