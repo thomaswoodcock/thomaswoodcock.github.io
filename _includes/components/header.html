@@ -5,7 +5,9 @@
   </p>
   {% if include.links %}
   <ul>
-    {% for link in include.links %}
+    {% if include.linktitle %}
+    <h2>{{ include.linktitle }}</h2>
+    {% endif %}{% for link in include.links %}
     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
     {% endfor %}
   </ul>
