@@ -1,0 +1,18 @@
+<h2>Latest Diary Entries</h2>
+<ul>
+  {% for entry in include.entries limit:3 %}
+  <li>
+    <header>
+      <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+      <p>
+        <time datetime="{{ entry.date }}"
+          >{{ entry.date | date_to_long_string: "ordinal" }}</time
+        >
+      </p>
+    </header>
+    {% if entry.description %}
+    <p>{{ entry.description }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

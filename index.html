@@ -7,24 +7,7 @@ title: Home
 where I write about learning, and rate albums and films." %}
 <article class="content">
   <article class="content-section">
-    <h2>Latest Diary Entries</h2>
-    <ul>
-      {% for post in site.posts limit:3 %}
-      <li>
-        <header>
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p>
-            <time datetime="{{ post.date }}"
-              >{{ post.date | date_to_long_string: "ordinal" }}</time
-            >
-          </p>
-        </header>
-        {% if post.description %}
-        <p>{{ post.description }}</p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+    {% include containers/latest-diary-entries.html %}
   </article>
   <article class="content-section">
     <h2>Latest Album Ratings</h2>
