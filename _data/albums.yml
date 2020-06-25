@@ -87,3 +87,16 @@
     - 25
     - 26
   rating: 7
+
+- id: 9
+  name: "Return to the 36 Chambers: The Dirty Version"
+  person:
+    - 9
+  year: 1995
+  genre:
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+  rating: 5
