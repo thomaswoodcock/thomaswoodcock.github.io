@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li>
+      <a href="/">Thomas Woodcock <span class="hidden">Home</span></a>
+    </li>
+    {% for link in include.links %}
+    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
