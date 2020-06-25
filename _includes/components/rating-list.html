@@ -1,0 +1,16 @@
+<ul>
+  {% for work in include.works %}{% assign rating = work.rating | minus: 1 %}{%
+  assign people = "" | split: "" %}{% for person_id in work.person %}{% assign
+  person = include.people | where: "id", person_id | first %}{% assign slug =
+  person.name | slugify %}{% capture link %}
+  <a href="{{ include.workpath }}/#{{ slug }}">{{ person.name }}</a>
+  {% endcapture %}{% assign people = people | push: link %}{% endfor %}
+  <li>
+    <header>
+      <h3>{{ people | join: " & " }}</h3>
+      <h4>{{ work.name }}</h4>
+    </header>
+    <p>{{ include.ratings[rating] | upcase }}</p>
+  </li>
+  {% endfor %}
+</ul>

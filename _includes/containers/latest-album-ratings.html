@@ -1,0 +1,4 @@
+{% assign works = site.data.albums | reverse | limit: 3 %}
+<h2>Latest Album Ratings</h2>
+{% include components/rating-list.html works=works people=site.data.artists
+ratings=site.data.ratings workpath="/albums" %}

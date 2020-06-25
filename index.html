@@ -13,20 +13,7 @@ where I write about learning, and rate albums and films." %}
     <h2>Latest Album Ratings</h2>
     {% assign albums = site.data.albums | reverse %}
     <ul>
-      {% for album in albums limit: 3 %}{% assign rating = album.rating | minus:
-      1 %}{% assign artists = "" | split: "" %}{% for artist_id in album.person
-      %}{% assign artist = site.data.artists | where: "id", artist_id | first
-      %}{% assign slug = artist.name | slugify %}{% capture link %}
-      <a href="/albums/#{{ slug }}">{{ artist.name }}</a>
-      {% endcapture %}{% assign artists = artists | push: link %}{% endfor %}
-      <li>
-        <header>
-          <h3>{{ artists | join: " & " }}</h3>
-          <h4>{{ album.name }}</h4>
-        </header>
-        <p>{{ site.data.ratings[rating] | upcase }}</p>
-      </li>
-      {% endfor %}
+      {% include containers/latest-album-ratings.html %}
     </ul>
   </article>
   <article class="content-section">
