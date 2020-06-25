@@ -1,0 +1,3 @@
+{% assign genres = site.data.film-genres | sort_natural: "name" %}{% include
+components/genre-list.html genres=genres works=site.data.films
+ratings=site.data.ratings people=site.data.directors peoplepath="/films" %}
