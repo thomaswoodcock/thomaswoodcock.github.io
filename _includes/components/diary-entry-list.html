@@ -1,6 +1,5 @@
-<h2>Latest Diary Entries</h2>
 <ul>
-  {% for entry in include.entries limit:3 %}
+  {% for entry in include.entries %}
   <li>
     <header>
       <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
