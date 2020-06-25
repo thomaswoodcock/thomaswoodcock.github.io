@@ -10,11 +10,7 @@ where I write about learning, and rate albums and films." %}
     {% include containers/latest-diary-entries.html %}
   </article>
   <article class="content-section">
-    <h2>Latest Album Ratings</h2>
-    {% assign albums = site.data.albums | reverse %}
-    <ul>
-      {% include containers/latest-album-ratings.html %}
-    </ul>
+    {% include containers/latest-album-ratings.html %}
   </article>
   <article class="content-section">
     <h2>Latest Film Ratings</h2>
