@@ -1,0 +1,21 @@
+<ul>
+  {% for entry in include.entries %}
+  <li class="content-section">
+    <article>
+      <header>
+        <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+        <p>
+          <time datetime="{{ entry.date }}"
+            >{{ entry.date | date_to_long_string: "ordinal" }}</time
+          >
+        </p>
+      </header>
+      {% if entry.description %}
+      <p>
+        {{ entry.description }}
+      </p>
+      {% endif %}
+    </article>
+  </li>
+  {% endfor %}
+</ul>

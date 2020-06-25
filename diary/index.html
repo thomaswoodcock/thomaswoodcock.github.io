@@ -6,25 +6,5 @@ title: Diary
 {% include components/header.html title=page.title subtitle="Writings about the
 things I am learning." %}
 <article class="content">
-  <ul>
-    {% for post in paginator.posts %}
-    <li class="content-section">
-      <article>
-        <header>
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p>
-            <time datetime="{{ post.date }}"
-              >{{ post.date | date_to_long_string: "ordinal" }}</time
-            >
-          </p>
-        </header>
-        {% if post.description %}
-        <p>
-          {{ post.description }}
-        </p>
-        {% endif %}
-      </article>
-    </li>
-    {% endfor %}
-  </ul>
+  {% include containers/diary.html %}
 </article>
