@@ -13,7 +13,7 @@
       </header>
       <ul>
         {% assign rating_groups = grouped_works.items | group_by: "rating" |
-        sort: "name" | reverse %}{% for rating_group in rating_groups %}{%
+        sort: "name" | reverse %}{% for rating_group in rating_groups.items %}{%
         assign rating = rating_group.name | minus: 1 %}
         <li>
           <section>
