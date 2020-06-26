@@ -1,11 +1,11 @@
 - title: Diary
   description: Writings about the things I am learning.
-  url: /diary/
+  url: /diary
 
 - title: Albums
   description: A list of albums I have listened to and rated.
-  url: /albums/
+  url: /albums
 
 - title: Films
   description: A list of films I have watched and rated.
-  url: /films/
+  url: /films
