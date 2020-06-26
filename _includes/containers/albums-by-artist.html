@@ -1,3 +1,3 @@
 {% assign people = site.data.artists | sort_natural: "name" %}{% include
 components/person-list.html people=people works=site.data.albums
-ratings=site.data.ratings %}
+ratings=site.data.ratings yearpath="/albums/years" %}

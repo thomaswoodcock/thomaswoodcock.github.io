@@ -26,7 +26,10 @@
               {% endcapture %}{% assign people = people | push: link %}{% endfor
               %}
               <li>
-                {{ people | join: " & " }} - {{ work.name }} ({{ work.year }})
+                {{ people | join: " & " }} - {{ work.name }} (<a
+                  href="{{ include.yearpath }}/#{{ work.year }}"
+                  >{{ work.year }}</a
+                >)
               </li>
               {% endfor %}
             </ul>

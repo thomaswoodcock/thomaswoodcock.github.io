@@ -29,7 +29,7 @@
               {% endcapture %}{% assign people = people | push: link %}{% endfor
               %}
               <li>
-                {{ people | join: " & " }} - {{ work.name }} ({{ work.year }})
+                {{ people | join: " & " }} - {{ work.name }}
               </li>
               {% endfor %}
             </ul>
