@@ -9,13 +9,11 @@
     <h2>{{ include.linktitle }}</h2>
     {% endif %}{% for link in include.links %}
     <li>
-      {% assign linkurl = link.url | relative_url %}{% assign pageurl = page.url
-      | relative_url %}{% if linkurl != pageurl %}
+      {% if link.url != page.url %}
       <a href="{{ link.url }}">{{ link.title }}</a>
       {% else %}{{ link.title }}{% endif %}
     </li>
     {% endfor %}
-    <li>{{ page.url }}</li>
   </ul>
   {% endif %}
 </header>
