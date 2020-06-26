@@ -1,0 +1,43 @@
+<ul>
+  {% assign grouped_works = include.works | group_by: "year" | sort: "name" |
+  reverse %}{% for yeargroup in grouped_works %}
+  <li class="content-section">
+    <article>
+      <header>
+        <h2 id="{{ yeargroup.name }}">{{ yeargroup.name }}</h2>
+        <a
+          href="#{{ yeargroup.name }}"
+          aria-label="link to {{ yeargroup.name }}"
+          >#</a
+        >
+      </header>
+      <ul>
+        {% assign rating_groups = grouped_works.items | group_by: "rating" |
+        sort: "name" | reverse %}{% for rating_group in rating_groups %}{%
+        assign rating = rating_group.name | minus: 1 %}
+        <li>
+          <section>
+            <h3>{{ include.ratings[rating] | upcase }}</h3>
+            <ul>
+              {% for work in rating_group.items %}{% assign people = "" | split:
+              "" %}{% for person_id in work.person %}{% assign person =
+              include.people | where: "id", person_id | first %}{% assign slug =
+              person.name | slugify %}{% capture link %}
+              <a href="{{ include.peoplepath }}/#{{ slug }}"
+                >{{ person.name }}</a
+              >
+              {% endcapture %}{% assign people = people | push: link %}{% endfor
+              %}
+              <li>
+                {{ people | join: " & " }} - {{ work.name }} ({{ work.year }})
+              </li>
+              {% endfor %}
+            </ul>
+          </section>
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+  </li>
+  {% endfor %}
+</ul>
