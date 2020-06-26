@@ -12,7 +12,8 @@
         >
       </header>
       <ul>
-        {{ yeargroup.items | jsonify }}
+        {% assign rating_groups = yeargroup.items | group_by: "rating" | sort:
+        "name" | reverse %}{{ rating_groups | jsonify }}
       </ul>
     </article>
   </li>
