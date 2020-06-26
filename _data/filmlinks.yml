@@ -1,0 +1,5 @@
+- title: Directors
+  url: /films
+
+- title: Genres
+  url: /films/genres
