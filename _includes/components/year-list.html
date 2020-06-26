@@ -12,7 +12,15 @@
         >
       </header>
       <ul>
-        {{ yeargroup | jsonify }}
+        {% assign rating_groups = yeargroup.items | group_by: "rating" | sort:
+        "name" | reverse %}{% for rating_group in rating_groups.items %}{%
+        assign rating = rating_group.name | minus: 1 %}
+        <li>
+          <section>
+            <h3>{{ include.ratings[rating] | upcase }}</h3>
+          </section>
+        </li>
+        {% endfor %}
       </ul>
     </article>
   </li>
