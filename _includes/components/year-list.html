@@ -18,6 +18,21 @@
         <li>
           <section>
             <h3>{{ include.ratings[rating] | upcase }}</h3>
+            <ul>
+              {% for work in rating_group.items %}{% assign people = "" | split:
+              "" %}{% for person_id in work.person %}{% assign person =
+              include.people | where: "id", person_id | first %}{% assign slug =
+              person.name | slugify %}{% capture link %}
+              <a href="{{ include.peoplepath }}/#{{ slug }}"
+                >{{ person.name }}</a
+              >
+              {% endcapture %}{% assign people = people | push: link %}{% endfor
+              %}
+              <li>
+                {{ people | join: " & " }} - {{ work.name }} ({{ work.year }})
+              </li>
+              {% endfor %}
+            </ul>
           </section>
         </li>
         {% endfor %}
