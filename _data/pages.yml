@@ -5,13 +5,7 @@
 - title: Albums
   description: A list of albums I have listened to and rated.
   url: /albums
-  subpages:
-    - url: /albums/artists
-    - url: /albums/genres
 
 - title: Films
   description: A list of films I have watched and rated.
   url: /films
-  subpages:
-    - url: /films/directors
-    - url: /films/genres
