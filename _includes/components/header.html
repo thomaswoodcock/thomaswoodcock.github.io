@@ -7,9 +7,13 @@
   <ul>
     {% if include.linktitle %}
     <h2>{{ include.linktitle }}</h2>
-    {% endif %}{% for link in include.links %}{% if link.url != page.url %}
-    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-    {% else %}{{ link.title }}{% endif %}{% endfor %}
+    {% endif %}{% for link in include.links %}
+    <li>
+      {% if link.url != page.url %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      {% else %}{{ link.title }}{% endif %}
+    </li>
+    {% endfor %}
   </ul>
   {% endif %}
 </header>
