@@ -12,9 +12,7 @@
         >
       </header>
       <ul>
-        {% assign rating_groups = yeargroup.items | group_by: "rating" | sort:
-        "name" | reverse %}{% for rating_group in rating_groups.items %}{{
-        rating_group | jsonify }}{% endfor %}
+        {{ yeargroup.items | jsonify }}
       </ul>
     </article>
   </li>
