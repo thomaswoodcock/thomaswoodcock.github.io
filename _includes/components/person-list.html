@@ -8,15 +8,15 @@
       </header>
       <ul>
         {% assign grouped_works = include.works | where_exp: "work",
-        "work.person contains person.id" | group_by: "rating" | sort: "name" |
-        reverse %}{% for rating_group in grouped_works %}{% assign rating =
-        rating_group.name | minus: 1 %}
+        "work.person contains person.id" | group_by: "rating" | sort_natural:
+        "name" | reverse %}{% for rating_group in grouped_works %}{% assign
+        rating = rating_group.name | minus: 1 %}
         <li>
           <section>
             <h3>{{ include.ratings[rating] | upcase }}</h3>
             <ul>
-              {% assign sorted_works = rating_group.items | sort: "year" %}{%
-              for work in sorted_works %}
+              {% assign sorted_works = rating_group.items | sort_natural: "name"
+              | sort: "year" %}{% for work in sorted_works %}
               <li>
                 {{ work.name }} (<a
                   href="{{ include.yearpath }}#{{ work.year }}"
