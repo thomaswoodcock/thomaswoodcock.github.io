@@ -228,6 +228,22 @@ footer {
   padding-left: var(--s-4);
 }
 
+.not-found {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found > h1 {
+  font-size: var(--s5);
+}
+
+.not-found > p {
+  margin-top: var(--s1);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
