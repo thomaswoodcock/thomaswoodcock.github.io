@@ -1,20 +1,62 @@
 - id: 1
-  name: Drama
+  name: Coming-of-Age
 
 - id: 2
-  name: Romance
+  name: Drama
 
 - id: 3
-  name: Comedy
+  name: New French Extremity
 
 - id: 4
-  name: Documentary
+  name: Romantic Comedy
 
 - id: 5
-  name: Thriller
+  name: Screwball Comedy
 
 - id: 6
-  name: Horror
+  name: Essay Film
 
 - id: 7
-  name: Sport
+  name: Slow Cinema
+
+- id: 8
+  name: Political Documentary
+
+- id: 9
+  name: Psychological Thriller
+
+- id: 10
+  name: Crime
+
+- id: 11
+  name: Romance
+
+- id: 12
+  name: Found Footage
+
+- id: 13
+  name: Experimental
+
+- id: 14
+  name: Abstract Film
+
+- id: 15
+  name: Horror
+
+- id: 16
+  name: Kitchen Sink Realism
+
+- id: 17
+  name: Sports
+
+- id: 18
+  name: Prison Film
+
+- id: 19
+  name: War Documentary
+
+- id: 20
+  name: British Documentary Film Movement
+
+- id: 21
+  name: Propaganda Film
