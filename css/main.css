@@ -140,6 +140,10 @@ time {
   padding-top: var(--s1);
 }
 
+.header *:focus {
+  outline-color: var(--color-light);
+}
+
 .header + .content {
   margin-top: var(--s3);
 }
