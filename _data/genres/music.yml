@@ -123,3 +123,18 @@
 
 - id: 42
   name: Dancehall
+
+- id: 43
+  name: Indie Rock
+
+- id: 44
+  name: Folk Pop
+
+- id: 45
+  name: Alt-Country
+
+- id: 46
+  name: Folk Rock
+
+- id: 47
+  name: Indie Folk
