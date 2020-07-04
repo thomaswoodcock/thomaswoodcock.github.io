@@ -135,3 +135,13 @@
     - 39
     - 40
   rating: 4
+
+- id: 13
+  name: Out Front
+  person:
+    - 13
+  year: 1961
+  genre:
+    - 11
+    - 8
+  rating: 5
