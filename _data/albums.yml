@@ -121,3 +121,17 @@
     - 35
     - 36
   rating: 5
+
+- id: 12
+  name: Torture Garden
+  person:
+    - 12
+  year: 1990
+  genre:
+    - 9
+    - 37
+    - 10
+    - 38
+    - 39
+    - 40
+  rating: 4
