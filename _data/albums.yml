@@ -196,3 +196,15 @@
     - 57
     - 58
   rating: 7
+
+- id: 18
+  name: Streetcleaner
+  person:
+    - 18
+  year: 1989
+  genre:
+    - 59
+    - 60
+    - 61
+    - 38
+  rating: 5
