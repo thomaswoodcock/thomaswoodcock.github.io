@@ -168,3 +168,19 @@
     - 46
     - 47
   rating: 7
+
+- id: 16
+  name: D.I. Go Pop
+  person:
+    - 16
+  year: 1994
+  genre:
+    - 39
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+  rating: 6
