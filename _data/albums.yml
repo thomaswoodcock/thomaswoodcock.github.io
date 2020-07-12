@@ -219,3 +219,13 @@
     - 34
     - 63
   rating: 6
+
+- id: 20
+  name: Elephant Mountain
+  person:
+    - 20
+  year: 1969
+  genre:
+    - 46
+    - 64
+  rating: 7
