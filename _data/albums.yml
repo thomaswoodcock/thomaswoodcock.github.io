@@ -208,3 +208,14 @@
     - 61
     - 38
   rating: 5
+
+- id: 19
+  name: Blank Project
+  person:
+    - 19
+  year: 2014
+  genre:
+    - 62
+    - 34
+    - 63
+  rating: 6
