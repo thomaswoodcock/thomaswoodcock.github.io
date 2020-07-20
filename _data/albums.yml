@@ -242,3 +242,12 @@
     - 46
     - 67
   rating: 7
+
+- id: 22
+  name: Survival
+  person:
+    - 22
+  year: 1979
+  genre:
+    - 68
+  rating: 7
