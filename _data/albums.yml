@@ -251,3 +251,24 @@
   genre:
     - 68
   rating: 7
+
+- id: 23
+  name: Right Place, Wrong Time
+  person:
+    - 23
+  year: 1976
+  genre:
+    - 69
+    - 70
+  rating: 5
+
+- id: 24
+  name: The Original Soundtrack
+  person:
+    - 24
+  year: 1975
+  genre:
+    - 71
+    - 65
+    - 72
+  rating: 7
